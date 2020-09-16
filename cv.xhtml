@@ -4,11 +4,36 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width"/>
+
+<style>
+:root { font-family: sans-serif }
+body { max-width: 50em; margin-left: auto; margin-right: auto; padding: 2em; border-radius: .5em }
+.center-block { display: table; margin-left: auto; margin-right: auto }
+.float-right { float: right }
+.float-right + .float-right { margin-right: 1em }
+img { border-radius: .5em }
+table { padding: 1em; border-radius: .5em }
+@media (prefers-color-scheme: dark), (prefers-color-scheme: no-preference){
+table { background: #364242; color: #28a4a4 }
+   :root {background: #434343; color: darkcyan }
+   a {color: #07caca }
+   body { background: #313131}
+}
+
+@media (prefers-color-scheme: light) {
+	table { background: #f7ce98 }
+	:root { background: bisque; color: #86482b }
+	a { color: #d76a37 }
+    body { background: tan }
+}
+</style>
+
 <title>Resume</title>
 </head>
 <body>
-<div><img alt="photo" src="photo.webp"/></div>
-
+<div class="center-block">
+<div class="float-right"><img alt="photo" src="photo.webp"/></div>
+<div class="float-right">
 <h1>Yuliia Levin</h1>
 <table>
 <tbody>
@@ -20,15 +45,17 @@
 <tr><td/><td><a href="https://github.com/ulyal">GitHub profile</a></td></tr>
 </tbody>
 </table>
+</div>
+</div>
 
-<h3>Education</h3>
+<h2>Education</h2>
 <p>2007–2011:<br/>
-Cherkassy State Technological University, Bachelor’s degree, System programming.</p>
+    Cherkassy State Technological University, Bachelor’s degree, System programming.</p>
 <p>November 2019 – present:<br/>
-Tel-Ran Computer School, Full stack developer.</p>
-<h3>Experience</h3>
+    Tel-Ran Computer School, Full stack developer.</p>
+<h2>Experience</h2>
 <p>August 2016 – November 2019<br/>
-Sourcing Specialist / IT Recruiter, Workforce Source Company</p>
+    Sourcing Specialist / IT Recruiter, Workforce Source Company</p>
 
 <h3>Skills</h3>
 <ul>
