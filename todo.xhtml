@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width"/>
+<style>
+
+button { margin-left: 1em; padding: 0 }
+tr { counter-increment: tr }
+td:first-child::before { content: counter(tr) ". " }
+
+</style>
+<title>To Do</title>
+</head>
+<body>
+<h1>To Do</h1>
+<div>
+    <input type="text"/>
+    <button onclick="add()">Add</button>
+</div>
+<table>
+<tbody/>
+</table>
+
+<script>
+"use strict";
+let input = document.getElementsByTagName("input")[0];
+let table = document.getElementsByTagName("table")[0];
+
+function add() {
+    let value = input.value.trim();
+    input.value = '';
+    if (value) {
+        let tr = table.insertRow();
+        tr.insertCell().innerText = value;
+        let button = document.createElement("button");
+        button.innerText = '❌';
+        button.onclick = del;
+        tr.insertCell().appendChild(button);
+    }
+}
+
+function del() {
+    table.deleteRow(this.parentElement.parentElement.rowIndex);
+}
+</script>
+
+</body>
+</html>
